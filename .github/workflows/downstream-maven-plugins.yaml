@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+# Keeping this file separate as the dependencies check would use more
+# repositories than needed this downstream check for GraalVM native image and
+# other Maven plugins.
+name: downstream
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [8, 11]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: ${{matrix.java}}
+        cache: 'maven'
+    - run: java -version
+    - run: sudo apt-get update -y
+    - run: sudo apt-get install libxml2-utils
+    - run: mvn clean install
+
+  # GraalVM job ensures the compatibility of GraaVM version above and the
+  # native-maven-plugin version.
+  graalvm:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v3
+    - uses: graalvm/setup-graalvm@v1
+      with:
+        version: '22.3'
+        java-version: '17'
+        components: 'native-image'
+        cache: 'maven'
+    - run: java -version
+    - run: sudo apt-get update -y
+    - run: sudo apt-get install libxml2-utils
+    - run: mvn -ntp -Pnative test
