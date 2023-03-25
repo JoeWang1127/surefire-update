@@ -18,9 +18,9 @@ package com.google.cloud.orgpolicy.v2;
 
 import static com.google.cloud.orgpolicy.v2.OrgPolicyClient.ListConstraintsPagedResponse;
 import static com.google.cloud.orgpolicy.v2.OrgPolicyClient.ListPoliciesPagedResponse;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.httpjson.GaxHttpJsonProperties;
@@ -38,18 +38,18 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import javax.annotation.Generated;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class OrgPolicyClientHttpJsonTest {
   private static MockHttpService mockService;
   private static OrgPolicyClient client;
 
-  @BeforeAll
+  @BeforeClass
   public static void startStaticServer() throws IOException {
     mockService =
         new MockHttpService(
@@ -65,15 +65,15 @@ public class OrgPolicyClientHttpJsonTest {
     client = OrgPolicyClient.create(settings);
   }
 
-  @AfterAll
+  @AfterClass
   public static void stopServer() {
     client.close();
   }
 
-  @BeforeEach
+  @Before
   public void setUp() {}
 
-  @AfterEach
+  @After
   public void tearDown() throws Exception {
     mockService.reset();
   }
