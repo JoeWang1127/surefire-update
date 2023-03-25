@@ -44,5 +44,4 @@ jobs:
     - run: java -version
     - run: sudo apt-get update -y
     - run: sudo apt-get install libxml2-utils
-    - run: mvn clean install
     - run: mvn -ntp -Pnative-2 test
