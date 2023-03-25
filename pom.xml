@@ -10,17 +10,13 @@
     Java idiomatic client for Google Cloud Platform services.
   </description>
 
-  <parent>
-    <groupId>com.google.cloud</groupId>
-    <artifactId>google-cloud-jar-parent</artifactId>
-    <version>1.7.0</version><!-- {x-version-update:google-cloud-java:current} -->
-  </parent>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <github.global.server>github</github.global.server>
     <site.installationModule>google-cloud-orgpolicy-parent</site.installationModule>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencyManagement>

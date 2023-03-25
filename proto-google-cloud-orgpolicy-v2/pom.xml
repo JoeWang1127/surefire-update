@@ -16,18 +16,22 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
+      <version>3.22.2</version>
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-common-protos</artifactId>
+      <version>2.14.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>api-common</artifactId>
+      <version>2.6.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
+      <version>31.1-jre</version>
     </dependency>
   </dependencies>
 </project>

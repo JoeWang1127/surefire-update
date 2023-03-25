@@ -20,26 +20,32 @@
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-api</artifactId>
+      <version>1.53.0</version>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-stub</artifactId>
+      <version>1.53.0</version>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-protobuf</artifactId>
+      <version>1.53.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>api-common</artifactId>
+      <version>2.6.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
+      <version>3.21.12</version>
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-common-protos</artifactId>
+      <version>2.14.3</version>
     </dependency>
      <dependency>
       <groupId>com.google.api.grpc</groupId>
@@ -52,22 +58,27 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
+      <version>31.1-jre</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax</artifactId>
+      <version>2.23.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
+      <version>2.23.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-httpjson</artifactId>
+      <version>0.108.3</version>
     </dependency>
     <dependency>
       <groupId>org.threeten</groupId>
       <artifactId>threetenbp</artifactId>
+      <version>1.6.5</version>
     </dependency>
 
     <!-- Test dependencies -->
@@ -75,12 +86,6 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <version>5.9.2</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-runner</artifactId>
-      <version>1.9.2</version>
       <scope>test</scope>
     </dependency>
 
@@ -93,18 +98,21 @@
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax</artifactId>
+      <version>2.23.3</version>
       <classifier>testlib</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
+      <version>2.23.3</version>
       <classifier>testlib</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-httpjson</artifactId>
+      <version>0.108.3</version>
       <classifier>testlib</classifier>
       <scope>test</scope>
     </dependency>
